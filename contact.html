@@ -131,12 +131,20 @@
       letter-spacing: 0.04em;
       white-space: nowrap;
     }
+
+  @media (max-width: 768px) {
+    .contact-wrap { grid-template-columns: 1fr; gap: 48px; padding: 48px 24px; }
+    .contact-wrap h1 { font-size: 36px; }
+    .book-strip { grid-template-columns: 1fr; padding: 48px 24px; gap: 24px; }
+    .book-strip a { display: block; text-align: center; }
+  }
   </style>
 </head>
 <body>
 
   <nav class="site-nav">
     <a href="index.html" class="nav-logo">Talk with Steph</a>
+    <button class="nav-hamburger" aria-label="Menu" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -159,7 +167,7 @@
       <form>
         <div class="form-field">
           <label>Your name</label>
-          <input type="text" placeholder="Mallory" />
+          <input type="text" placeholder="Your Name" />
         </div>
         <div class="form-field">
           <label>Email address</label>
@@ -214,6 +222,12 @@
     </div>
   </footer>
 
+<script>
+function toggleNav(btn) {
+  btn.classList.toggle("open");
+  document.querySelector(".nav-links").classList.toggle("open");
+}
+</script>
 <script src="config.js"></script>
 </body>
 </html>

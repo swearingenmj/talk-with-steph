@@ -112,12 +112,22 @@
       margin-bottom: 10px;
       font-weight: 400;
     }
+
+  @media (max-width: 768px) {
+    .about-intro { grid-template-columns: 1fr; gap: 0; }
+    .about-photo { display: none; }
+    section[style*="padding: 72px 40px"] { padding: 48px 24px !important; }
+    h1[style*="font-size:48px"] { font-size: 36px !important; }
+    .values-section { padding: 48px 24px; }
+    .values-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
   </style>
 </head>
 <body>
 
   <nav class="site-nav">
     <a href="index.html" class="nav-logo">Talk with Steph</a>
+    <button class="nav-hamburger" aria-label="Menu" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html" class="active">About</a></li>
@@ -202,6 +212,12 @@
     </div>
   </footer>
 
+<script>
+function toggleNav(btn) {
+  btn.classList.toggle("open");
+  document.querySelector(".nav-links").classList.toggle("open");
+}
+</script>
 <script src="config.js"></script>
 </body>
 </html>

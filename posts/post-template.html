@@ -76,6 +76,7 @@
 
   <nav class="site-nav">
     <a href="../index.html" class="nav-logo">Talk with Steph</a>
+    <button class="nav-hamburger" aria-label="Menu" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../about.html">About</a></li>
@@ -157,7 +158,13 @@
     </div>
   </footer>
 
-  <script src="../config.js"></script>
+  <script>
+function toggleNav(btn) {
+  btn.classList.toggle("open");
+  document.querySelector(".nav-links").classList.toggle("open");
+}
+</script>
+<script src="../config.js"></script>
 
 </body>
 </html>

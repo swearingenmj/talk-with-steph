@@ -104,12 +104,23 @@
       letter-spacing: 0.04em;
       white-space: nowrap;
     }
+
+  @media (max-width: 768px) {
+    .blog-header { padding: 48px 24px 32px; }
+    .blog-header h1 { font-size: 36px; }
+    .blog-grid { grid-template-columns: 1fr; padding: 0 24px 48px; }
+    .newsletter { grid-template-columns: 1fr; padding: 48px 24px; gap: 28px; }
+    .newsletter-form { flex-direction: column; }
+    .newsletter-form input { width: 100%; }
+    .newsletter-form button { width: 100%; padding: 12px; }
+  }
   </style>
 </head>
 <body>
 
   <nav class="site-nav">
     <a href="index.html" class="nav-logo">Talk with Steph</a>
+    <button class="nav-hamburger" aria-label="Menu" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -206,6 +217,12 @@
     </div>
   </footer>
 
+<script>
+function toggleNav(btn) {
+  btn.classList.toggle("open");
+  document.querySelector(".nav-links").classList.toggle("open");
+}
+</script>
 <script src="config.js"></script>
 </body>
 </html>

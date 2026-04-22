@@ -192,3 +192,172 @@ footer.site-footer {
 }
 .post-excerpt { font-size: 13px; color: #3a3a30; line-height: 1.65; }
 .post-meta    { font-size: 11px; color: #7a7a6a; margin-top: 10px; }
+
+
+/* ═══════════════════════════════════════════
+   MOBILE RESPONSIVE STYLES
+   Applies to screens 768px wide and under
+═══════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  /* ── NAV: hamburger menu ── */
+  nav.site-nav {
+    padding: 0 24px;
+    position: relative;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #1E1E1A;
+    border-top: 0.5px solid #3a3a34;
+    padding: 8px 0;
+    z-index: 200;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links li {
+    border-bottom: 0.5px solid #2a2a24;
+  }
+  .nav-links a {
+    display: block;
+    padding: 14px 24px;
+    font-size: 13px;
+  }
+  .nav-cta {
+    display: none;
+  }
+  .nav-hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 38px;
+    height: 38px;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: #F5F0E8;
+    transition: all 0.25s;
+  }
+  .nav-hamburger.open span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  .nav-hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-hamburger.open span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-text {
+    padding: 48px 24px;
+  }
+  .hero-h1 {
+    font-size: 32px;
+  }
+  .hero-sub {
+    font-size: 15px;
+    max-width: 100%;
+  }
+  .hero-image {
+    min-height: 280px;
+  }
+  .hero-image-inner {
+    min-height: 280px;
+  }
+
+  /* ── PULL QUOTE ── */
+  .pullquote {
+    padding: 40px 24px;
+  }
+  .pullquote p {
+    font-size: 20px;
+  }
+
+  /* ── BLOG PREVIEW (home page) ── */
+  .blog-section {
+    padding: 48px 24px;
+  }
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+  .post-img-sm-1,
+  .post-img-sm-2 {
+    height: 180px;
+  }
+
+  /* ── ABOUT STRIP ── */
+  .about-strip {
+    grid-template-columns: 1fr;
+  }
+  .about-strip-text {
+    padding: 48px 24px;
+  }
+  .about-strip-image {
+    min-height: 200px;
+  }
+
+  /* ── CTA STRIP ── */
+  .cta-strip {
+    padding: 48px 24px;
+  }
+  .cta-strip h2 {
+    font-size: 24px;
+  }
+
+  /* ── FOOTER ── */
+  footer.site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 32px 24px;
+  }
+
+  /* ── GENERAL PADDING ── */
+  .eyebrow { margin-bottom: 12px; }
+
+}
+
+
+/* ═══════════════════════════════════════════
+   TABLET STYLES
+   Applies to screens 480px–768px
+═══════════════════════════════════════════ */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+  .posts-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .post-img-lg {
+    height: 180px;
+  }
+
+}
+
+/* Hide hamburger on desktop, show only on mobile */
+@media (min-width: 769px) {
+  .nav-hamburger { display: none; }
+}

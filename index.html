@@ -145,12 +145,27 @@
       border-radius: 50%;
       border: 2px solid rgba(255,255,255,0.3);
     }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-text { padding: 48px 24px; }
+      .hero-h1 { font-size: 32px; }
+      .hero-sub { max-width: 100%; }
+      .hero-image { min-height: 300px; }
+      .hero-image-inner { min-height: 300px; }
+      .blog-section { padding: 48px 24px; }
+      .posts-grid { grid-template-columns: 1fr; }
+      .about-strip { grid-template-columns: 1fr; }
+      .about-strip-text { padding: 48px 24px; }
+      .about-strip-image { min-height: 200px; }
+    }
   </style>
 </head>
 <body>
 
   <nav class="site-nav">
     <a href="index.html" class="nav-logo">Talk with Steph</a>
+    <button class="nav-hamburger" aria-label="Menu" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -174,9 +189,9 @@
     </div>
     <div class="hero-image">
       <div class="hero-image-inner">
-        <div class="photo-placeholder"></div>
+        <img src="assets/images/steph-hero.jpg" alt="Photo of Steph" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0;" />
       </div>
-      <span class="photo-label">Photo of Steph goes here</span>
+      <!-- <span class="photo-label">Photo of Steph goes here</span> -->
     </div>
   </section>
 
@@ -253,6 +268,12 @@
     </div>
   </footer>
 
+<script>
+function toggleNav(btn) {
+  btn.classList.toggle("open");
+  document.querySelector(".nav-links").classList.toggle("open");
+}
+</script>
 <script src="config.js"></script>
 </body>
 </html>

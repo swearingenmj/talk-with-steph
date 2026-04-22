@@ -105,12 +105,21 @@
       margin-bottom: 10px;
     }
     .faq-item p { font-size: 13px; color: #3a3a30; line-height: 1.75; }
+
+  @media (max-width: 768px) {
+    .work-header { padding: 48px 24px 32px; }
+    .work-header h1 { font-size: 36px; }
+    .offerings { grid-template-columns: 1fr; padding: 0 24px 48px; }
+    .faq-section { padding: 48px 24px; }
+    .faq-grid { grid-template-columns: 1fr; gap: 24px; }
+  }
   </style>
 </head>
 <body>
 
   <nav class="site-nav">
     <a href="index.html" class="nav-logo">Talk with Steph</a>
+    <button class="nav-hamburger" aria-label="Menu" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -193,6 +202,12 @@
     </div>
   </footer>
 
+<script>
+function toggleNav(btn) {
+  btn.classList.toggle("open");
+  document.querySelector(".nav-links").classList.toggle("open");
+}
+</script>
 <script src="config.js"></script>
 </body>
 </html>
