@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work with Me — Talk with Steph</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .work-header {
+      padding: 72px 40px 48px;
+      text-align: center;
+      background: #F5F0E8;
+    }
+    .work-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 400;
+      color: #1E1E1A;
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .work-header p {
+      font-size: 15px;
+      color: #3a3a30;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .offerings {
+      padding: 0 40px 72px;
+      background: #F5F0E8;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .offering {
+      background: #fff;
+      padding: 36px 28px;
+      border-radius: 2px;
+      border: 0.5px solid #c8c0b0;
+      display: flex;
+      flex-direction: column;
+    }
+    .offering-tag {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #5A7A5C;
+      margin-bottom: 12px;
+      font-weight: 400;
+    }
+    .offering h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: #1E1E1A;
+      margin-bottom: 14px;
+      font-weight: 400;
+      line-height: 1.3;
+    }
+    .offering p {
+      font-size: 13px;
+      color: #3a3a30;
+      line-height: 1.8;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+    .offering a {
+      font-size: 12px;
+      color: #C45A2A;
+      border-bottom: 1px solid #C45A2A;
+      text-decoration: none;
+      padding-bottom: 2px;
+      align-self: flex-start;
+    }
+
+    .offering-featured {
+      background: #1E1E1A;
+      border-color: #1E1E1A;
+    }
+    .offering-featured .offering-tag { color: #E07A4A; }
+    .offering-featured h3            { color: #F5F0E8; }
+    .offering-featured p             { color: #b0a898; }
+    .offering-featured a             { color: #E07A4A; border-bottom-color: #E07A4A; }
+
+    /* FAQ */
+    .faq-section {
+      padding: 64px 40px;
+      background: #ede8dd;
+    }
+    .faq-section .eyebrow { margin-bottom: 16px; }
+    .faq-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: #1E1E1A;
+      margin-bottom: 40px;
+    }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 860px; }
+    .faq-item h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      color: #1E1E1A;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    .faq-item p { font-size: 13px; color: #3a3a30; line-height: 1.75; }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">Talk with Steph</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="work-with-me.html" class="active">Work with Me</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="https://cal.com/steph-straub/45min" data-link="booking" class="nav-cta">Book a Free Call</a>
+  </nav>
+
+  <div class="divider-terracotta"></div>
+
+  <div class="work-header">
+    <div class="eyebrow">Work with Me</div>
+    <h1>Let's find your way back.</h1>
+    <p>Every conversation starts with a free 45-minute discovery call. If we're a good fit, I offer three complimentary one-hour sessions to get started — real coaching, no commitment.</p>
+  </div>
+
+  <div class="offerings">
+    <div class="offering offering-featured">
+      <div class="offering-tag">Start here &middot; Free</div>
+      <h3>Free Discovery Session</h3>
+      <p>Start with a free 45-minute call to talk through where you are and what you're looking for. If it feels like a good fit, I'll offer you three complimentary one-hour coaching sessions — real work, no strings attached. This is my way of making sure coaching with me is worth your time before you invest in it.</p>
+      <a href="https://cal.com/steph-straub/45min" data-link="booking">Book your free call &rarr;</a>
+    </div>
+    <div class="offering">
+      <div class="offering-tag">1:1 Coaching</div>
+      <h3>Find Yourself Again</h3>
+      <p>A focused coaching engagement for people who are ready to stop going through the motions and start living by their own values. We work on identity, clarity, and honest communication — with yourself and with the people in your life.</p>
+      <a href="contact.html">Get in touch &rarr;</a>
+    </div>
+    <div class="offering">
+      <div class="offering-tag">Communication</div>
+      <h3>Say What You Mean</h3>
+      <p>For people who know what they feel but struggle to say it — to their partner, their boss, their kids. We build the language and the confidence to have the conversations that matter most, without the spiral of anxiety that comes before them.</p>
+      <a href="contact.html">Get in touch &rarr;</a>
+    </div>
+  </div>
+
+  <div class="divider-sage"></div>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="eyebrow">Common questions</div>
+    <h2>What to expect.</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>Is this therapy?</h4>
+        <p>No. Coaching is forward-focused — we're not going back to diagnose the past, we're working on who you want to be and how you want to live. If therapy is something you need, I'll say so.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How long does coaching take?</h4>
+        <p>That depends entirely on what you're working through. Some people find clarity in a handful of sessions. Others choose to work together over several months. We figure that out together.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What if I'm not sure what I need?</h4>
+        <p>That's exactly what the free session is for. You don't need to have it figured out before we talk. Most people don't. That's the point.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do you only work with women?</h4>
+        <p>No. My work is  designed for all people navigating the particular kind of quiet identity loss that tends to come with building a full life for everyone around you. If you're wondering if this is for you, reach out and let's talk.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-strip">
+    <h2>Not sure where to start?</h2>
+    <p>Start with a free session. We'll figure it out together.</p>
+    <a href="https://cal.com/steph-straub/45min" data-link="booking">Book a free call</a>
+  </section>
+
+  <footer class="site-footer">
+    <a href="index.html" class="footer-logo">Talk with Steph</a>
+    <span class="footer-copy">&copy; 2026 Steph Straub &middot; All rights reserved</span>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/talkwithsteph.co" data-link="instagram">Instagram</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://cal.com/steph-straub/45min" data-link="booking">Book a call</a>
+    </div>
+  </footer>
+
+<script src="config.js"></script>
+</body>
+</html>

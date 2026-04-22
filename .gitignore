@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Misc
+*.log
+*.tmp
+.env

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Talk with Steph</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-wrap {
+      padding: 72px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      max-width: 960px;
+      background: #F5F0E8;
+    }
+    .contact-wrap h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 400;
+      color: #1E1E1A;
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .contact-wrap > div > p {
+      font-size: 14px;
+      color: #3a3a30;
+      line-height: 1.85;
+      margin-bottom: 32px;
+    }
+
+    /* FORM */
+    .form-field { margin-bottom: 18px; }
+    .form-field label {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #5A7A5C;
+      margin-bottom: 6px;
+      font-weight: 400;
+    }
+    .form-field input,
+    .form-field textarea {
+      width: 100%;
+      background: #fff;
+      border: 1px solid #c8c0b0;
+      padding: 10px 14px;
+      font-family: 'Lato', sans-serif;
+      font-size: 14px;
+      color: #1E1E1A;
+      border-radius: 2px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-field input:focus,
+    .form-field textarea:focus { border-color: #5A7A5C; }
+    .form-field textarea { height: 120px; resize: none; }
+    .form-submit {
+      background: #C45A2A;
+      color: #fff;
+      font-size: 13px;
+      padding: 12px 32px;
+      border-radius: 2px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      font-family: 'Lato', sans-serif;
+    }
+    .form-submit:hover { background: #a04020; }
+
+    /* CONTACT INFO */
+    .contact-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: #1E1E1A;
+      margin-bottom: 20px;
+    }
+    .contact-detail { margin-bottom: 20px; }
+    .contact-detail .label {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #5A7A5C;
+      margin-bottom: 4px;
+      font-weight: 400;
+    }
+    .contact-detail .value { font-size: 14px; color: #1E1E1A; }
+    .contact-detail a { color: #C45A2A; text-decoration: none; }
+    .contact-detail a:hover { color: #a04020; }
+
+    .contact-quote {
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid #c8c0b0;
+    }
+    .contact-quote p {
+      font-size: 15px;
+      color: #3a3a30;
+      font-style: italic;
+      font-family: 'Playfair Display', serif;
+      line-height: 1.7;
+    }
+
+    /* BOOK STRIP */
+    .book-strip {
+      background: #2E2A22;
+      padding: 56px 40px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+    }
+    .book-strip h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #F5F0E8;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+    .book-strip p { font-size: 14px; color: #b0a898; line-height: 1.7; }
+    .book-strip a {
+      display: inline-block;
+      background: #C45A2A;
+      color: #fff;
+      font-size: 13px;
+      padding: 14px 28px;
+      border-radius: 2px;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">Talk with Steph</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="work-with-me.html">Work with Me</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a href="https://cal.com/steph-straub/45min" data-link="booking" class="nav-cta">Book a Free Call</a>
+  </nav>
+
+  <div class="divider-terracotta"></div>
+
+  <div class="contact-wrap">
+    <!-- FORM -->
+    <div>
+      <div class="eyebrow">Get in touch</div>
+      <h1>Let's talk.</h1>
+      <p>Have a question before you book? Want to say hello? Fill out the form and I'll get back to you within 48 hours.</p>
+
+      <form>
+        <div class="form-field">
+          <label>Your name</label>
+          <input type="text" placeholder="Mallory" />
+        </div>
+        <div class="form-field">
+          <label>Email address</label>
+          <input type="email" placeholder="you@email.com" />
+        </div>
+        <div class="form-field">
+          <label>What's on your mind?</label>
+          <textarea placeholder="I've been feeling stuck lately and..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send message</button>
+      </form>
+    </div>
+
+    <!-- INFO -->
+    <div class="contact-info">
+      <h2>Or book directly.</h2>
+
+      <div class="contact-detail">
+        <div class="label">Book a free 45-min call</div>
+        <div class="value"><a href="https://cal.com/steph-straub/45min" data-link="booking">cal.com/steph-straub/45min</a></div>
+      </div>
+      <div class="contact-detail">
+        <div class="label">Instagram</div>
+        <div class="value"><a href="https://www.instagram.com/talkwithsteph.co" data-link="instagram" data-show-handle="true">@talkwithsteph.co</a></div>
+      </div>
+      <div class="contact-detail">
+        <div class="label">Response time</div>
+        <div class="value">Within 48 hours</div>
+      </div>
+
+      <div class="contact-quote">
+        <p>"I'm not here to tell you what to do.<br>I'm here to help you hear yourself again."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOK STRIP -->
+  <section class="book-strip">
+    <div>
+      <h2>Free sessions available now.</h2>
+      <p>Start with a free 45-minute discovery call. If it feels right, three complimentary one-hour sessions follow. No commitment, no pitch — just an honest place to begin.</p>
+    </div>
+    <a href="https://cal.com/steph-straub/45min" data-link="booking">Book your free call</a>
+  </section>
+
+  <footer class="site-footer">
+    <a href="index.html" class="footer-logo">Talk with Steph</a>
+    <span class="footer-copy">&copy; 2026 Steph Straub &middot; All rights reserved</span>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/talkwithsteph.co" data-link="instagram">Instagram</a>
+      <a href="https://cal.com/steph-straub/45min" data-link="booking">Book a call</a>
+    </div>
+  </footer>
+
+<script src="config.js"></script>
+</body>
+</html>

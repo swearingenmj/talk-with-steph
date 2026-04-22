@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talk with Steph — Communication & Decision Coaching</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 520px;
+    }
+    .hero-text {
+      padding: 72px 48px 72px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #F5F0E8;
+    }
+    .hero-h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      line-height: 1.25;
+      color: #1E1E1A;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+    .hero-h1 em { font-style: italic; color: #C45A2A; }
+    .hero-sub {
+      font-size: 15px;
+      color: #3a3a30;
+      max-width: 380px;
+      margin-bottom: 32px;
+      line-height: 1.8;
+    }
+    .hero-actions { display: flex; gap: 14px; align-items: center; }
+    .hero-image {
+      background: #2a2a24;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 420px;
+    }
+    .hero-image-inner {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #3a3530 0%, #2a2520 50%, #1e1a16 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 420px;
+    }
+    .photo-placeholder {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: #5A7A5C;
+      opacity: 0.4;
+    }
+    .photo-label {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 11px;
+      color: #b0a898;
+      opacity: 0.8;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* BLOG SECTION */
+    .blog-section { padding: 64px 40px; background: #F5F0E8; }
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #5A7A5C;
+      margin-bottom: 32px;
+      font-weight: 400;
+    }
+    .posts-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 24px;
+    }
+    .post-featured {
+      background: #fff;
+      border-radius: 2px;
+      overflow: hidden;
+      border: 0.5px solid #c8c0b0;
+    }
+    .post-sm {
+      background: #fff;
+      border-radius: 2px;
+      overflow: hidden;
+      border: 0.5px solid #c8c0b0;
+    }
+    .post-img-lg   { height: 220px; background: linear-gradient(135deg, #5A7A5C, #3a5a3c); }
+    .post-img-sm-1 { height: 140px; background: linear-gradient(135deg, #C45A2A, #a04020); }
+    .post-img-sm-2 { height: 140px; background: linear-gradient(135deg, #2E2A22, #1e1a16); }
+    .post-body { padding: 20px; }
+
+    /* ABOUT STRIP */
+    .about-strip { display: grid; grid-template-columns: 1fr 1fr; }
+    .about-strip-text {
+      padding: 64px 48px;
+      background: #5A7A5C;
+    }
+    .about-strip-text .eyebrow { color: #c8e0c8; }
+    .about-strip-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: #fff;
+      font-weight: 400;
+      margin: 12px 0 20px;
+      line-height: 1.3;
+    }
+    .about-strip-text p {
+      font-size: 14px;
+      color: #d8ecd8;
+      line-height: 1.85;
+      margin-bottom: 24px;
+    }
+    .about-strip-text a {
+      font-size: 13px;
+      color: #fff;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 2px;
+      text-decoration: none;
+    }
+    .about-strip-image {
+      background: linear-gradient(135deg, #3a5a3c, #2a4a2c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+    }
+    .about-circle {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">Talk with Steph</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="work-with-me.html">Work with Me</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="https://cal.com/steph-straub/45min" data-link="booking" class="nav-cta">Book a Free Call</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="eyebrow">Communication &amp; Decision Coaching</div>
+      <h1 class="hero-h1">You love your life.<br>You just don't feel like <em>yourself</em> in it anymore.</h1>
+      <p class="hero-sub">Something is off. You can't quite name it without feeling ungrateful. But it's there — a quiet hum that tells you something needs to change.</p>
+      <div class="hero-actions">
+        <a href="https://cal.com/steph-straub/45min" data-link="booking" class="btn-primary">Book a Free Session</a>
+        <a href="about.html" class="btn-secondary">Meet Steph</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-image-inner">
+        <div class="photo-placeholder"></div>
+      </div>
+      <span class="photo-label">Photo of Steph goes here</span>
+    </div>
+  </section>
+
+  <div class="divider-terracotta"></div>
+
+  <!-- PULL QUOTE -->
+  <section class="pullquote">
+    <p>"I just feel stuck. I don't know what I want anymore. I love my life but I'm not happy and I don't know why."
+      <span>If this sounds familiar, you're in the right place.</span>
+    </p>
+  </section>
+
+  <div class="divider-sage"></div>
+
+  <!-- BLOG PREVIEW -->
+  <section class="blog-section">
+    <div class="section-label">From the blog</div>
+    <div class="posts-grid">
+      <div class="post-featured">
+        <div class="post-img-lg"></div>
+        <div class="post-body">
+          <div class="post-tag">On identity</div>
+          <div class="post-title">What does it actually mean to lose yourself — and how do you find your way back?</div>
+          <div class="post-excerpt">It doesn't happen all at once. It happens in a thousand small moments where you said yes when you meant no, or stayed quiet when you had something to say...</div>
+          <div class="post-meta">April 2025 &nbsp;·&nbsp; 5 min read</div>
+        </div>
+      </div>
+      <div class="post-sm">
+        <div class="post-img-sm-1"></div>
+        <div class="post-body">
+          <div class="post-tag">On decisions</div>
+          <div class="post-title-sm">Why you can't decide what you want (and what to do about it)</div>
+          <div class="post-meta">March 2025</div>
+        </div>
+      </div>
+      <div class="post-sm">
+        <div class="post-img-sm-2"></div>
+        <div class="post-body">
+          <div class="post-tag">On communication</div>
+          <div class="post-title-sm">The conversations you keep avoiding are the ones that matter most</div>
+          <div class="post-meta">February 2025</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT STRIP -->
+  <section class="about-strip">
+    <div class="about-strip-text">
+      <div class="eyebrow">About Steph</div>
+      <h2>I help people find their way back to themselves.</h2>
+      <p>I know what it feels like to go through the motions. To have a full life and still feel like something is missing. I became a coach because I believe that the right conversation — the honest one — can change everything.</p>
+      <a href="about.html">Read my story &rarr;</a>
+    </div>
+    <div class="about-strip-image">
+      <div class="about-circle"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-strip">
+    <h2>Ready to have that conversation?</h2>
+    <p>Start with a free 45-minute discovery call. If it feels like a good fit, I'm offering three complimentary one-hour coaching sessions to get us started. No commitment. No pitch. Just real work.</p>
+    <a href="https://cal.com/steph-straub/45min" data-link="booking">Book your free session</a>
+  </section>
+
+  <footer class="site-footer">
+    <a href="index.html" class="footer-logo">Talk with Steph</a>
+    <span class="footer-copy">&copy; 2026 Steph Straub &middot; All rights reserved</span>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/talkwithsteph.co" data-link="instagram">Instagram</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://cal.com/steph-straub/45min" data-link="booking">Book a call</a>
+    </div>
+  </footer>
+
+<script src="config.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #1E1E1A;
+  background: #F5F0E8;
+  line-height: 1.7;
+}
+
+/* ── NAV ── */
+nav.site-nav {
+  background: #1E1E1A;
+  border-bottom: 0.5px solid #3a3a34;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #F5F0E8;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 13px;
+  color: #b0a898;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover,
+.nav-links a.active { color: #E07A4A; }
+.nav-cta {
+  background: #E07A4A;
+  color: #fff !important;
+  font-size: 12px;
+  padding: 8px 18px;
+  border-radius: 2px;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── DIVIDERS ── */
+.divider-terracotta { height: 5px; background: #C45A2A; }
+.divider-sage       { height: 5px; background: #5A7A5C; }
+.divider-thin       { height: 0.5px; background: #c8c0b0; margin: 0 40px; }
+
+/* ── EYEBROW ── */
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #5A7A5C;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+
+/* ── BUTTONS ── */
+.btn-primary {
+  display: inline-block;
+  background: #C45A2A;
+  color: #fff;
+  font-size: 13px;
+  padding: 12px 24px;
+  border-radius: 2px;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+.btn-secondary {
+  display: inline-block;
+  font-size: 13px;
+  color: #5A7A5C;
+  text-decoration: none;
+  border-bottom: 1px solid #5A7A5C;
+  padding-bottom: 2px;
+}
+
+/* ── FOOTER ── */
+footer.site-footer {
+  background: #1E1E1A;
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: #F5F0E8;
+  text-decoration: none;
+}
+.footer-copy { font-size: 12px; color: #5a5a50; }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { font-size: 12px; color: #5A7A5C; text-decoration: none; }
+.footer-links a:hover { color: #E07A4A; }
+
+/* ── CTA STRIP ── */
+.cta-strip {
+  background: #C45A2A;
+  padding: 56px 40px;
+  text-align: center;
+}
+.cta-strip h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.cta-strip p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 28px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-strip a {
+  background: #fff;
+  color: #C45A2A;
+  font-size: 13px;
+  padding: 12px 28px;
+  border-radius: 2px;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+/* ── PULL QUOTE ── */
+.pullquote {
+  padding: 56px 40px;
+  text-align: center;
+  background: #2E2A22;
+}
+.pullquote p {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-style: italic;
+  color: #F5F0E8;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.pullquote span {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5A7A5C;
+  margin-top: 16px;
+  font-style: normal;
+}
+
+/* ── POST CARDS ── */
+.post-tag {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #C45A2A;
+  margin-bottom: 6px;
+  font-weight: 400;
+}
+.post-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #1E1E1A;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+.post-title-sm {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  color: #1E1E1A;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+.post-excerpt { font-size: 13px; color: #3a3a30; line-height: 1.65; }
+.post-meta    { font-size: 11px; color: #7a7a6a; margin-top: 10px; }
