@@ -2,12 +2,11 @@
 
 ## About this website
 
-This is your personal website for your coaching practice, Talk with Steph. It has five pages:
+This is your personal website for your coaching practice, Talk with Steph. It has four pages:
 
-- **Home** — your first impression, with a hero headline, pull quote, blog preview, and a call to action
+- **Home** — your first impression, with a hero headline, pull quote, and a call to action
 - **About** — your story, your coaching philosophy, and how you work
 - **Work with Me** — your free discovery call offer, your coaching services, and an FAQ
-- **Blog** — a grid of your writing with a newsletter signup
 - **Contact** — a contact form and your direct booking link
 
 The site is built with standard HTML and CSS files. You do not need to log into any platform to edit it — you just open the files, make your changes, and save. Everything is designed to be updated by you without needing a developer for day-to-day edits.
@@ -22,25 +21,17 @@ talkwithsteph/
 ├── index.html
 ├── about.html
 ├── work-with-me.html
-├── blog.html
 ├── contact.html
 ├── style.css
 ├── config.js
-├── README.md
+├── CNAME
+├── .gitignore
+└── README.md
 │
-├── assets/
-│   └── images/
-│       ├── steph-hero.jpg
-│       ├── steph-about.jpg
-│       └── blog/
-│           ├── post-identity.jpg
-│           ├── post-decisions.jpg
-│           └── post-communication.jpg
-│
-└── posts/
-    ├── what-does-it-mean-to-lose-yourself.html
-    ├── why-you-cant-decide-what-you-want.html
-    └── the-conversations-you-keep-avoiding.html
+└── assets/
+    └── images/
+        ├── steph-hero.jpg
+        └── steph-with-benji.jpg
 ```
 
 | File / Folder | What it is |
@@ -48,13 +39,12 @@ talkwithsteph/
 | `index.html` | Your home page |
 | `about.html` | Your About page |
 | `work-with-me.html` | Your Work with Me page |
-| `blog.html` | Your blog index — shows all post cards |
 | `contact.html` | Your Contact page |
 | `style.css` | Controls colors, fonts, and spacing across all pages |
 | `config.js` | **The most important file for updates — your links live here** |
-| `assets/images/` | All photos and images |
-| `assets/images/blog/` | Images for individual blog posts |
-| `posts/` | Each blog post as its own HTML file |
+| `CNAME` | Created automatically by GitHub — do not delete this |
+| `.gitignore` | Tells GitHub to ignore junk files like .DS_Store |
+| `assets/images/` | All photos for the site |
 | `README.md` | This guide |
 
 ---
@@ -101,64 +91,14 @@ Open the relevant HTML file, use Cmd+F / Ctrl+F to search for the words you want
 
 ---
 
-## How to add your photo
+## How to update your photos
 
-Save your photo as a `.jpg`, name it clearly (e.g. `steph-hero.jpg`), and put it in `assets/images/`.
+Photos live in `assets/images/`. There are currently two:
 
-Then open the HTML file where the photo should appear, search for `photo-placeholder`, and replace:
-```html
-<div class="photo-placeholder"></div>
-```
-with:
-```html
-<img src="assets/images/steph-hero.jpg" alt="Photo of Steph" style="width:100%; height:100%; object-fit:cover;" />
-```
+- `steph-hero.jpg` — the main photo on the home page
+- `steph-with-benji.jpg` — the photo on the About page
 
-Use `steph-about.jpg` for the about page and `steph-hero.jpg` for the home page.
-
----
-
-## How to write and publish a blog post
-
-Each blog post lives as its own file in the `posts/` folder. This keeps your writing separate from the site structure and makes each post its own shareable, linkable page.
-
-**Step 1 — Create the post file**
-
-Copy any existing file in the `posts/` folder and rename it to match your new post, using hyphens instead of spaces:
-```
-posts/everything-is-fine-so-why-do-i-feel-off.html
-```
-
-**Step 2 — Write your post**
-
-Open the file and update the title, date, category tag, and body content. The template is already styled to match the rest of your site.
-
-**Step 3 — Add a card to the blog index**
-
-Open `blog.html` and find an existing blog card. Copy the whole block, paste it at the top of the grid, and update the title, excerpt, date, reading time, and link:
-
-```html
-<div class="blog-card">
-  <div class="blog-card-img img-sage"></div>
-  <div class="blog-card-body">
-    <div class="post-tag">On identity</div>
-    <div class="post-title">Your post title here</div>
-    <div class="post-excerpt">A short summary of your post...</div>
-    <div class="post-meta">Month Year &nbsp;·&nbsp; X min read</div>
-    <br><a href="posts/your-post-filename.html" class="read-more">Read more &rarr;</a>
-  </div>
-</div>
-```
-
-For the card color, swap `img-sage` for any of these:
-- `img-sage` — dark green
-- `img-terra` — terracotta orange
-- `img-dark` — warm dark brown
-- `img-charcoal` — near black
-
-**Step 4 — Push to GitHub**
-
-Save both files and push to GitHub. Your post goes live automatically.
+To swap either photo, save your new image as a `.jpg`, give it the same filename as the one you're replacing, and drop it into `assets/images/`. Push to GitHub and it will update automatically.
 
 ---
 
@@ -175,122 +115,76 @@ Save both files and push to GitHub. Your post goes live automatically.
 
 ---
 
-## How the contact form works (and what to do about it)
+## How the contact form works
 
-The contact form currently **does not send emails**. It needs to be connected to a service first. Since you already have Google Workspace, submissions will land directly in your `steph@talkwithsteph.co` inbox once set up.
+**Status: not yet connected — needs to be set up using Google Forms.**
 
-The recommended free option is **EmailJS** (emailjs.com) — free up to 200 emails per month and requires no backend or server setup.
+The plan is to replace the current contact form with a **Google Form** connected to your Google Workspace account. This keeps your email address completely out of the public repository while still delivering submissions to `hello@talkwithsteph.co`.
 
-**Step 1 — Set up EmailJS**
+**How it works:**
+- Someone fills out the form on the contact page
+- Google saves every submission to a Google Sheet in your Drive
+- You get an email notification at `hello@talkwithsteph.co` for every new submission
+- No code, no API keys, nothing sensitive in the repo
 
-1. Go to emailjs.com and create a free account
-2. Go to **Email Services** and connect your Google Workspace account (sign in with your `steph@talkwithsteph.co` email)
-3. Go to **Email Templates** and create a new template. Set it up so you receive the name, email, and message from the form. EmailJS will show you the variable names to use — they look like `{{from_name}}`, `{{message}}` etc.
-4. Note down your **Service ID**, **Template ID**, and **Public Key** — you will need these in the next step
+**Step 1 — Create the Google Form**
 
-**Step 2 — Add EmailJS to your contact form**
+1. Go to forms.google.com signed into your Google Workspace account
+2. Create a new form with three fields: **Name** (short answer), **Email** (short answer), **Message** (paragraph)
+3. Give it a title like "Talk with Steph — Contact"
+4. Click the **Responses** tab and click the Google Sheets icon to create a connected spreadsheet — all submissions will appear there automatically
 
-Open `contact.html` and add this line inside the `<head>` section, just before `</head>`:
-```html
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-```
+**Step 2 — Set up email notifications**
 
-Then find `<form>` and replace it with:
-```html
-<form id="contact-form">
-```
+1. Still in the Responses tab, click the three-dot menu
+2. Select **Get email notifications for new responses**
+3. Make sure you are signed in as `hello@talkwithsteph.co` so notifications go to the right inbox
 
-Then find `<script src="config.js"></script>` near the bottom and add this block just before it:
-```html
-<script>
-  emailjs.init("YOUR_PUBLIC_KEY");
-  document.getElementById("contact-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
-      .then(function() {
-        alert("Message sent! Steph will get back to you within 48 hours.");
-        document.getElementById("contact-form").reset();
-      }, function(error) {
-        alert("Something went wrong. Please try again or email directly.");
-      });
-  });
-</script>
-```
+**Step 3 — Add it to the contact page**
 
-Replace `YOUR_PUBLIC_KEY`, `YOUR_SERVICE_ID`, and `YOUR_TEMPLATE_ID` with the values from your EmailJS account.
+1. Click **Send** at the top right of the form
+2. Click the **embed icon** (`< >`) to get an iframe code, or the **link icon** to get a shareable URL
+3. **To embed:** copy the iframe code, open `contact.html`, find the `<form>` block, and replace the entire form with the iframe
+4. **To link out:** replace the form with a button that opens the Google Form in a new tab — cleaner visually since there is no Google styling clash
 
-That's it. Every submission goes straight to your `steph@talkwithsteph.co` inbox. A developer can set this up in about 20 minutes if needed.
+**Embed vs link:** embedding keeps visitors on the page but the form will have Google's default styling. Linking out avoids that clash. Either works — choose based on preference.
 
 ---
 
-## How the newsletter signup works (and what to do about it)
+## Going live with your Wix domain
 
-The newsletter form on the blog page also **does not collect emails yet**. It needs to be connected to an email list service.
+**Status: DNS has been updated in Wix — waiting for propagation to complete.**
 
-The two best free options for a coaching practice are **Kit** and **Mailchimp**. Kit (kit.com, formerly ConvertKit) is built specifically for creators and coaches and is free up to 10,000 subscribers — it is the better long-term choice. Mailchimp (mailchimp.com) is more widely known and free up to 500 subscribers.
+GitHub Pages is already turned on and the site is live at the `github.io` URL. The Wix domain has been pointed to GitHub using four A records. DNS propagation can take up to 24 hours — once it completes, `talkwithsteph.co` will load the site automatically.
 
-**Setting up with Kit:**
+**What was done:**
 
-1. Create a free account at kit.com
-2. Go to **Grow → Landing Pages & Forms** and create a new inline form
-3. Kit will give you an embed code — copy the form action URL from it
-4. Open `blog.html` and find `<div class="newsletter-form">`
-5. Replace the `<input>` and `<button>` inside it with Kit's embed code
-
-**Setting up with Mailchimp:**
-
-1. Create a free account at mailchimp.com
-2. Go to **Audience → Signup Forms → Embedded Forms**
-3. Copy the form action URL Mailchimp gives you
-4. Open `blog.html`, find `<div class="newsletter-form">`, and replace the `<input>` and `<button>` with Mailchimp's embed code
-
-Once connected, every signup is saved to your list automatically and you can email your subscribers directly from whichever platform you choose. A developer can set this up in about 15 minutes.
-
----
-
-## How to go live with your Wix domain
-
-Since your code is already on GitHub, use **GitHub Pages** — it is completely free and your site updates automatically every time you push a change.
-
-**Step 1 — Turn on GitHub Pages**
-
-1. Go to your GitHub repository
-2. Click **Settings** → **Pages**
-3. Under "Source", select your main branch and click **Save**
-4. GitHub gives you a URL like `yourusername.github.io/repo-name` — your site is live there immediately
-
-**Step 2 — Connect your Wix domain**
-
-1. In GitHub Pages settings, find the **Custom Domain** field
-2. Type in your domain (e.g. `talkwithsteph.co`) and click **Save**
-3. GitHub will show you four IP addresses to add:
+1. GitHub Pages was enabled in the repo Settings → Pages
+2. The custom domain `talkwithsteph.co` was added in GitHub Pages settings — this created the `CNAME` file in the repo automatically
+3. The existing Wix A records (which pointed to Wix's servers) were deleted from the Wix DNS settings
+4. Four new A records were added in Wix pointing to GitHub's servers:
    ```
    185.199.108.153
    185.199.109.153
    185.199.110.153
    185.199.111.153
    ```
+5. A CNAME record was added for `www` pointing to `swearingenmj.github.io`
 
-**Step 3 — Update DNS in Wix**
+**To confirm it worked:** go to GitHub → Settings → Pages and look for a green checkmark next to `talkwithsteph.co`. Once the padlock (SSL) is active, tick the **Enforce HTTPS** checkbox.
 
-1. Log into manage.wix.com
-2. Go to **Domains** → find your domain → **Manage** → **Advanced DNS Settings**
-3. Add four **A records** — one per IP address above
-4. For each: set **Host** to `@` and **Value** to the IP address
-5. Save
-
-Within a few hours your domain points to your GitHub site. GitHub also handles the SSL certificate (the padlock) automatically. You keep paying Wix only for the domain name itself.
+**Note on the CNAME file:** GitHub created this file automatically when the custom domain was added. Do not delete it — it is what tells GitHub which domain this site belongs to.
 
 ---
 
-## Things to do before you go live
+## Things to do
 
-- [ ] Add real photos (replace placeholder boxes with images from `assets/images/`)
-- [ ] Connect contact form via EmailJS — submissions go to `steph@talkwithsteph.co`
-- [ ] Connect newsletter signup via Kit or Mailchimp
-- [ ] Update `config.js` with your Linktree link
-- [ ] Turn on GitHub Pages and connect your Wix domain
-- [ ] Write and publish your first real blog post in the `posts/` folder
+- [x] Photos added — `steph-hero.jpg` and `steph-with-benji.jpg` are live
+- [x] Linktree link updated in `config.js`
+- [x] GitHub Pages turned on
+- [x] Wix DNS updated with GitHub A records — waiting on propagation
+- [x] Once DNS propagates, enable **Enforce HTTPS** in GitHub Pages settings
+- [ ] Set up Google Form and connect it to the contact page (see instructions above)
 
 ---
 
