@@ -6,33 +6,120 @@
   <title>Contact — Talk with Steph</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .contact-wrap {
-      padding: 72px 40px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 72px;
-      max-width: 960px;
+
+    /* ── HERO SECTION ── */
+    .contact-hero {
+      padding: 80px 40px 64px;
       background: #F5F0E8;
+      text-align: center;
     }
-    .contact-wrap h1 {
+    .contact-hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: 48px;
       font-weight: 400;
       color: #1E1E1A;
-      margin-bottom: 16px;
       line-height: 1.15;
+      margin-bottom: 20px;
     }
-    .contact-wrap > div > p {
-      font-size: 14px;
+    .contact-hero h1 em {
+      font-style: italic;
+      color: #C45A2A;
+    }
+    .contact-hero p {
+      font-size: 16px;
       color: #3a3a30;
+      max-width: 520px;
+      margin: 0 auto 36px;
       line-height: 1.85;
-      margin-bottom: 32px;
+    }
+    .contact-hero .btn-primary {
+      font-size: 15px;
+      padding: 16px 36px;
+    }
+    .contact-hero .no-commitment {
+      display: block;
+      font-size: 12px;
+      color: #7a7a6a;
+      margin-top: 14px;
+      letter-spacing: 0.04em;
     }
 
-    /* FORM */
-    .form-field { margin-bottom: 18px; }
-    .form-field label {
-      display: block;
+    /* ── WHAT TO EXPECT ── */
+    .what-to-expect {
+      padding: 64px 40px;
+      background: #EDE8DD;
+    }
+    .what-to-expect h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: #1E1E1A;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .expect-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .expect-number {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: #C45A2A;
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+    .expect-item h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      color: #1E1E1A;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+    .expect-item p {
+      font-size: 13px;
+      color: #3a3a30;
+      line-height: 1.75;
+    }
+
+    /* ── QUOTE STRIP ── */
+    .contact-quote-strip {
+      background: #2E2A22;
+      padding: 56px 40px;
+      text-align: center;
+    }
+    .contact-quote-strip p {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-style: italic;
+      color: #F5F0E8;
+      max-width: 580px;
+      margin: 0 auto 28px;
+      line-height: 1.5;
+    }
+    .contact-quote-strip a {
+      display: inline-block;
+      background: #C45A2A;
+      color: #fff;
+      font-size: 13px;
+      padding: 13px 28px;
+      border-radius: 2px;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── CONTACT DETAILS ── */
+    .contact-details {
+      padding: 56px 40px;
+      background: #F5F0E8;
+      display: flex;
+      gap: 48px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .contact-detail-item .label {
       font-size: 11px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -40,104 +127,61 @@
       margin-bottom: 6px;
       font-weight: 400;
     }
-    .form-field input,
-    .form-field textarea {
-      width: 100%;
-      background: #fff;
-      border: 1px solid #c8c0b0;
-      padding: 10px 14px;
-      font-family: 'Lato', sans-serif;
-      font-size: 14px;
-      color: #1E1E1A;
-      border-radius: 2px;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    .form-field input:focus,
-    .form-field textarea:focus { border-color: #5A7A5C; }
-    .form-field textarea { height: 120px; resize: none; }
-    .form-submit {
-      background: #C45A2A;
-      color: #fff;
-      font-size: 13px;
-      padding: 12px 32px;
-      border-radius: 2px;
-      border: none;
-      cursor: pointer;
-      letter-spacing: 0.04em;
-      font-family: 'Lato', sans-serif;
-    }
-    .form-submit:hover { background: #a04020; }
+    .contact-detail-item .value { font-size: 14px; color: #1E1E1A; }
+    .contact-detail-item a { color: #C45A2A; text-decoration: none; }
+    .contact-detail-item a:hover { color: #a04020; }
 
-    /* CONTACT INFO */
-    .contact-info h2 {
+    /*
+    ══════════════════════════════════════════════
+    GOOGLE FORM SECTION — HIDDEN UNTIL FORM IS READY
+
+    To activate when Steph has created the Google Form:
+    1. Go to forms.google.com and create the form
+    2. Click Send → the embed icon < > → copy the src URL
+    3. Replace YOUR_GOOGLE_FORM_URL in the iframe below
+    4. Remove the "display: none" line from this CSS block
+
+    That's it — the section will appear automatically.
+    ══════════════════════════════════════════════
+    */
+    .google-form-section {
+      display: none; /* ← REMOVE THIS LINE WHEN FORM IS READY */
+      padding: 64px 40px;
+      background: #F5F0E8;
+      border-top: 0.5px solid #c8c0b0;
+    }
+    .google-form-section h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 26px;
+      font-size: 30px;
       font-weight: 400;
       color: #1E1E1A;
-      margin-bottom: 20px;
-    }
-    .contact-detail { margin-bottom: 20px; }
-    .contact-detail .label {
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #5A7A5C;
-      margin-bottom: 4px;
-      font-weight: 400;
-    }
-    .contact-detail .value { font-size: 14px; color: #1E1E1A; }
-    .contact-detail a { color: #C45A2A; text-decoration: none; }
-    .contact-detail a:hover { color: #a04020; }
-
-    .contact-quote {
-      margin-top: 40px;
-      padding-top: 32px;
-      border-top: 1px solid #c8c0b0;
-    }
-    .contact-quote p {
-      font-size: 15px;
-      color: #3a3a30;
-      font-style: italic;
-      font-family: 'Playfair Display', serif;
-      line-height: 1.7;
-    }
-
-    /* BOOK STRIP */
-    .book-strip {
-      background: #2E2A22;
-      padding: 56px 40px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 40px;
-      align-items: center;
-    }
-    .book-strip h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      color: #F5F0E8;
-      font-weight: 400;
       margin-bottom: 8px;
     }
-    .book-strip p { font-size: 14px; color: #b0a898; line-height: 1.7; }
-    .book-strip a {
-      display: inline-block;
-      background: #C45A2A;
-      color: #fff;
-      font-size: 13px;
-      padding: 14px 28px;
+    .google-form-section p {
+      font-size: 14px;
+      color: #5a5a50;
+      margin-bottom: 28px;
+      line-height: 1.8;
+      max-width: 520px;
+    }
+    .google-form-section iframe {
+      width: 100%;
+      max-width: 640px;
+      height: 600px;
+      border: none;
       border-radius: 2px;
-      text-decoration: none;
-      letter-spacing: 0.04em;
-      white-space: nowrap;
     }
 
-  @media (max-width: 768px) {
-    .contact-wrap { grid-template-columns: 1fr; gap: 48px; padding: 48px 24px; }
-    .contact-wrap h1 { font-size: 36px; }
-    .book-strip { grid-template-columns: 1fr; padding: 48px 24px; gap: 24px; }
-    .book-strip a { display: block; text-align: center; }
-  }
+    @media (max-width: 768px) {
+      .contact-hero { padding: 56px 24px 48px; }
+      .contact-hero h1 { font-size: 34px; }
+      .what-to-expect { padding: 48px 24px; }
+      .expect-grid { grid-template-columns: 1fr; gap: 28px; }
+      .contact-quote-strip { padding: 48px 24px; }
+      .contact-quote-strip p { font-size: 18px; }
+      .contact-details { flex-direction: column; gap: 24px; padding: 40px 24px; }
+      .google-form-section { padding: 48px 24px; }
+    }
   </style>
 </head>
 <body>
@@ -156,60 +200,82 @@
 
   <div class="divider-terracotta"></div>
 
-  <div class="contact-wrap">
-    <!-- FORM -->
-    <div>
-      <div class="eyebrow">Get in touch</div>
-      <h1>Let's talk.</h1>
-      <p>Have a question before you book? Want to say hello? Fill out the form and I'll get back to you within 48 hours.</p>
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="eyebrow">Start here</div>
+    <h1>The first session<br>is <em>always</em> free.</h1>
+    <p>A free 45-minute discovery call to talk through where you are and what you're looking for. If it feels like a good fit, three complimentary one-hour coaching sessions follow. No commitment. No pitch.</p>
+    <a href="https://cal.com/steph-straub/45min" data-link="booking" class="btn-primary">Book your free discovery call</a>
+    <span class="no-commitment">No commitment &nbsp;&middot;&nbsp; No pitch &nbsp;&middot;&nbsp; Just an honest conversation</span>
+  </section>
 
-      <form>
-        <div class="form-field">
-          <label>Your name</label>
-          <input type="text" placeholder="Your Name" />
-        </div>
-        <div class="form-field">
-          <label>Email address</label>
-          <input type="email" placeholder="you@email.com" />
-        </div>
-        <div class="form-field">
-          <label>What's on your mind?</label>
-          <textarea placeholder="I've been feeling stuck lately and..."></textarea>
-        </div>
-        <button type="submit" class="form-submit">Send message</button>
-      </form>
-    </div>
+  <div class="divider-sage"></div>
 
-    <!-- INFO -->
-    <div class="contact-info">
-      <h2>Or book directly.</h2>
-
-      <div class="contact-detail">
-        <div class="label">Book a free 45-min call</div>
-        <div class="value"><a href="https://cal.com/steph-straub/45min" data-link="booking">cal.com/steph-straub/45min</a></div>
+  <!-- WHAT TO EXPECT -->
+  <section class="what-to-expect">
+    <h2>What happens when you book.</h2>
+    <div class="expect-grid">
+      <div class="expect-item">
+        <div class="expect-number">01</div>
+        <h3>Pick a time</h3>
+        <p>Choose a 45-minute slot that works for you. The booking takes less than two minutes and there is no paperwork or prep required.</p>
       </div>
-      <div class="contact-detail">
-        <div class="label">Instagram</div>
-        <div class="value"><a href="https://www.instagram.com/talkwithsteph.co" data-link="instagram" data-show-handle="true">@talkwithsteph.co</a></div>
+      <div class="expect-item">
+        <div class="expect-number">02</div>
+        <h3>We talk honestly</h3>
+        <p>No agenda, no script. Just a real conversation about where you are, what feels off, and what you are hoping to find. You do not need to have it figured out before we talk.</p>
       </div>
-      <div class="contact-detail">
-        <div class="label">Response time</div>
-        <div class="value">Within 48 hours</div>
-      </div>
-
-      <div class="contact-quote">
-        <p>"I'm not here to tell you what to do.<br>I'm here to help you hear yourself again."</p>
+      <div class="expect-item">
+        <div class="expect-number">03</div>
+        <h3>You decide what's next</h3>
+        <p>If it feels like a good fit, I will offer you three complimentary one-hour sessions to get started. If it is not the right fit, that is okay too — no pressure, ever.</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- BOOK STRIP -->
-  <section class="book-strip">
-    <div>
-      <h2>Free sessions available now.</h2>
-      <p>Start with a free 45-minute discovery call. If it feels right, three complimentary one-hour sessions follow. No commitment, no pitch — just an honest place to begin.</p>
+  <!-- QUOTE STRIP -->
+  <section class="contact-quote-strip">
+    <p>"I'm not here to tell you what to do. I'm here to help you hear yourself again."</p>
+    <a href="https://cal.com/steph-straub/45min" data-link="booking">Book a free session</a>
+  </section>
+
+  <!-- CONTACT DETAILS -->
+  <section class="contact-details">
+    <div class="contact-detail-item">
+      <div class="label">Book a free call</div>
+      <div class="value"><a href="https://cal.com/steph-straub/45min" data-link="booking">cal.com/steph-straub/45min</a></div>
     </div>
-    <a href="https://cal.com/steph-straub/45min" data-link="booking">Book your free call</a>
+    <div class="contact-detail-item">
+      <div class="label">Instagram</div>
+      <div class="value"><a href="https://www.instagram.com/talkwithsteph.co" data-link="instagram" data-show-handle="true">@talkwithsteph.co</a></div>
+    </div>
+    <div class="contact-detail-item">
+      <div class="label">Response time</div>
+      <div class="value">Within 48 hours</div>
+    </div>
+  </section>
+
+  <!--
+  ══════════════════════════════════════════════
+  GOOGLE FORM SECTION — HIDDEN UNTIL FORM IS READY
+
+  To activate:
+  1. Create your Google Form at forms.google.com
+  2. Click Send → embed icon < > → copy the src URL
+  3. Replace YOUR_GOOGLE_FORM_URL in the iframe below
+  4. Remove the "display: none" line in the CSS above
+
+  The section will appear automatically once you do that.
+  ══════════════════════════════════════════════
+  -->
+  <section class="google-form-section">
+    <div class="eyebrow">Have a question first?</div>
+    <h2>Send a message.</h2>
+    <p>Not quite ready to book? Send a message and Steph will get back to you within 48 hours.</p>
+    <iframe
+      src="YOUR_GOOGLE_FORM_URL"
+      title="Contact Steph">
+    </iframe>
   </section>
 
   <footer class="site-footer">
