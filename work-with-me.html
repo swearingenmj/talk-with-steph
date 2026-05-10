@@ -1,212 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work with Me — Talk with Steph</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .work-header {
-      padding: 72px 40px 48px;
-      text-align: center;
-      background: #F5F0E8;
-    }
-    .work-header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      font-weight: 400;
-      color: #1E1E1A;
-      margin-bottom: 16px;
-      line-height: 1.15;
-    }
-    .work-header p {
-      font-size: 15px;
-      color: #3a3a30;
-      max-width: 520px;
-      margin: 0 auto;
-      line-height: 1.8;
-    }
-
-    .offerings {
-      padding: 0 40px 72px;
-      background: #F5F0E8;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .offering {
-      background: #fff;
-      padding: 36px 28px;
-      border-radius: 2px;
-      border: 0.5px solid #c8c0b0;
-      display: flex;
-      flex-direction: column;
-    }
-    .offering-tag {
-      font-size: 10px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #5A7A5C;
-      margin-bottom: 12px;
-      font-weight: 400;
-    }
-    .offering h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      color: #1E1E1A;
-      margin-bottom: 14px;
-      font-weight: 400;
-      line-height: 1.3;
-    }
-    .offering p {
-      font-size: 13px;
-      color: #3a3a30;
-      line-height: 1.8;
-      margin-bottom: 24px;
-      flex: 1;
-    }
-    .offering a {
-      font-size: 12px;
-      color: #C45A2A;
-      border-bottom: 1px solid #C45A2A;
-      text-decoration: none;
-      padding-bottom: 2px;
-      align-self: flex-start;
-    }
-
-    .offering-featured {
-      background: #1E1E1A;
-      border-color: #1E1E1A;
-    }
-    .offering-featured .offering-tag { color: #E07A4A; }
-    .offering-featured h3            { color: #F5F0E8; }
-    .offering-featured p             { color: #b0a898; }
-    .offering-featured a             { color: #E07A4A; border-bottom-color: #E07A4A; }
-
-    /* FAQ */
-    .faq-section {
-      padding: 64px 40px;
-      background: #ede8dd;
-    }
-    .faq-section .eyebrow { margin-bottom: 16px; }
-    .faq-section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 30px;
-      font-weight: 400;
-      color: #1E1E1A;
-      margin-bottom: 40px;
-    }
-    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 860px; }
-    .faq-item h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 17px;
-      color: #1E1E1A;
-      font-weight: 400;
-      margin-bottom: 10px;
-    }
-    .faq-item p { font-size: 13px; color: #3a3a30; line-height: 1.75; }
-
-  @media (max-width: 768px) {
-    .work-header { padding: 48px 24px 32px; }
-    .work-header h1 { font-size: 36px; }
-    .offerings { grid-template-columns: 1fr; padding: 0 24px 48px; }
-    .faq-section { padding: 48px 24px; }
-    .faq-grid { grid-template-columns: 1fr; gap: 24px; }
-  }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <nav class="site-nav">
-    <a href="index.html" class="nav-logo">Talk with Steph</a>
-    <button class="nav-hamburger" aria-label="Menu" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="work-with-me.html" class="active">Work with Me</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="https://cal.com/steph-straub/45min" data-link="booking" class="nav-cta">Book a Free Call</a>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Talk with Steph</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="work-with-me.html" class="nav-link active">Work with Me</a>
+        <a href="#cta" class="btn btn-sm">Book a Free Call</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <div class="divider-terracotta"></div>
+  <main>
 
-  <div class="work-header">
-    <div class="eyebrow">Work with Me</div>
-    <h1>Let's figure out what's actually going on.</h1>
-    <p>Every conversation starts with a free 45-minute call. No prep required, no commitment. If it feels like a good fit, three complimentary one-hour sessions follow. Real work from the first conversation.</p>
-  </div>
-
-  <div class="offerings">
-    <div class="offering offering-featured">
-      <div class="offering-tag">Start here &middot; Free</div>
-      <h3>Free Discovery Session</h3>
-      <p>A free 45-minute call to talk through where you are and what you're looking for. You don't need to have it figured out before we talk — most people don't, and that's the point. If it feels like a good fit, three complimentary one-hour sessions follow. No pitch at the end. Just an honest conversation about what would actually help.</p>
-      <a href="https://cal.com/steph-straub/45min" data-link="booking">Book your free call &rarr;</a>
-    </div>
-    <div class="offering">
-      <div class="offering-tag">1:1 Coaching</div>
-      <h3>Find Yourself Again</h3>
-      <p>For people who have built a full life and still feel like something is fundamentally off. We work on getting clear on who you actually are under all the roles you're playing — and what you want to do about it. Not in a blow-up-your-life way. In a finally-be-honest way.</p>
-      <a href="contact.html">Get in touch &rarr;</a>
-    </div>
-    <div class="offering">
-      <div class="offering-tag">Communication</div>
-      <h3>Say What You Mean</h3>
-      <p>For people who rehearse the conversation 40 times in their head and then say "no it's fine" anyway. We work on building the language and the nerve to have the conversations that actually matter — without the spiral that comes before them or the resentment that builds when you don't.</p>
-      <a href="contact.html">Get in touch &rarr;</a>
-    </div>
-  </div>
-
-  <div class="divider-sage"></div>
-
-  <!-- FAQ -->
-  <section class="faq-section">
-    <div class="eyebrow">Common questions</div>
-    <h2>What to expect.</h2>
-    <div class="faq-grid">
-      <div class="faq-item">
-        <h4>Is this therapy?</h4>
-        <p>No — and I'll be direct about the difference. Therapy often goes back to understand the past. Coaching is about what you want to do now. Both are valuable. If I think therapy is what you need, I'll tell you. I'm not going to take your money and pretend coaching is the answer to everything.</p>
+    <!-- HERO -->
+    <section class="about-hero">
+      <div class="blob blob-hero-1"></div>
+      <div class="blob blob-hero-2"></div>
+      <div class="container">
+        <p class="eyebrow">Work with Me</p>
+        <h1>Here's how we actually do this.</h1>
+        <p class="hero-sub">If you've found your way here, you probably already know what's been sitting with you. Maybe it's a conversation you've been putting off for weeks. Maybe it's a decision you've been circling for months. Maybe you're not entirely sure what it is yet. You just know that something needs to move.</p>
+        <p class="hero-sub-kicker">That's enough to start.</p>
       </div>
-      <div class="faq-item">
-        <h4>How long does coaching take?</h4>
-        <p>Honestly, it depends on what you're working through. Some people get what they need in a few sessions. Others want to keep going. There's no package I'm trying to sell you into — we figure it out as we go.</p>
-      </div>
-      <div class="faq-item">
-        <h4>What if I don't know what I need?</h4>
-        <p>"I don't know what I need" is probably the most common thing I hear on discovery calls. You don't need to have it figured out before we talk. That's literally what the call is for.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Do you only work with women?</h4>
-        <p>No. I work with anyone navigating the specific kind of quiet drift that comes from spending years building a life for everyone around you. If you're wondering whether this is for you, just reach out. Worst case, we have a good conversation.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="cta-strip">
-    <h2>Not sure where to start?</h2>
-    <p>Good. That's exactly what the first call is for. No prep, no pitch — just a real conversation.</p>
-    <a href="https://cal.com/steph-straub/45min" data-link="booking">Book a free call</a>
-  </section>
+    <!-- PACKAGES -->
+    <section class="packages">
+      <div class="blob blob-pkg"></div>
+      <div class="container">
+        <p class="eyebrow">The offer</p>
+        <div class="package-grid">
 
-  <footer class="site-footer">
-    <a href="index.html" class="footer-logo">Talk with Steph</a>
-    <span class="footer-copy">&copy; 2026 Steph Straub &middot; All rights reserved</span>
-    <div class="footer-links">
-      <a href="https://www.instagram.com/talkwithsteph.co" data-link="instagram">Instagram</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://cal.com/steph-straub/45min" data-link="booking">Book a call</a>
+          <div class="package package-featured">
+            <div class="package-blob"></div>
+            <div class="package-tag">Most popular</div>
+            <h3>Four Sessions</h3>
+            <p class="package-price">$850</p>
+            <p>This is the package most people start with, and for good reason. Four sessions gives us room to get underneath the thing that's keeping you stuck: not just the surface conversation, but the fear underneath it, the values driving it, and the words to actually say it.</p>
+            <p>We'll work through whatever you're facing, build a framework you can take with you, and get you to a place where the conversation you've been avoiding starts to feel like something you can actually have.</p>
+            <p class="package-detail">Each session is 50 minutes on video call. We pick up where we left off or start fresh with whatever's most pressing. You set the agenda.</p>
+            <a href="#cta" class="btn">Book a Free Discovery Call</a>
+          </div>
+
+          <div class="package">
+            <div class="package-blob"></div>
+            <h3>One Session</h3>
+            <p class="package-price">$250</p>
+            <p>For returning clients or anyone who finds themselves with something new to work through. You've done the work before. Sometimes you just need a focused hour to think something through with someone who isn't living inside it with you.</p>
+            <a href="#cta" class="btn btn-outline">Book a Session</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJECTION -->
+    <section class="objection">
+      <div class="blob blob-obj-1"></div>
+      <div class="container">
+        <h2 class="objection-headline">Will this actually work for me?</h2>
+        <div class="objection-body">
+          <p>If you're ready to get past whatever is blocking you, I'm happy to help. That's genuinely all there is to it.</p>
+          <p>What I can tell you is that this isn't talk therapy, and it isn't just another self-reflection exercise. It's practical, it moves quickly, and the goal is always the same: to get you from stuck to moving. If you're not sure whether it's the right fit, the discovery call is a no-commitment way to find out before you spend anything.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT A SESSION LOOKS LIKE -->
+    <section class="session-looks">
+      <div class="blob blob-session"></div>
+      <div class="container">
+        <p class="eyebrow">What a session actually looks like</p>
+        <div class="session-prose">
+          <p>You show up and tell me what's going on, and we figure out what's underneath it — the real fear, the real want, the values that are in conflict — and we build something concrete from that.</p>
+          <p>By the end of each session you'll have something you didn't have at the start: a clearer picture of what you actually want, a better understanding of what's been in the way, or a plan for the conversation you need to have. Usually all three.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GROUP SESSIONS -->
+    <section class="group-sessions">
+      <div class="container">
+        <div class="group-inner">
+          <div class="group-blob"></div>
+          <p class="eyebrow">Coming soon</p>
+          <h2>Group Sessions</h2>
+          <p>Group work is something I'm genuinely excited about. There's a richness that comes from working through hard things alongside other people who are doing the same, something that one-on-one work can't quite replicate.</p>
+          <p>If you'd like to be the first to know when group sessions open up, join the waitlist below.</p>
+          <a href="#" class="btn btn-outline">Join the Waitlist</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+      <div class="blob blob-newsletter"></div>
+      <div class="container">
+        <p class="eyebrow">Not quite ready?</p>
+        <h2>Stay in the loop.</h2>
+        <p>If now isn't the right time, you're welcome to stay in the loop. I send occasional emails with thoughts on communication, hard conversations, and the stuff that makes them feel harder than they need to be. No cadence, just when I have something worth saying.</p>
+        <a href="#" class="btn">Join the Newsletter</a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="cta">
+      <div class="blob blob-cta-1"></div>
+      <div class="blob blob-cta-2"></div>
+      <div class="container">
+        <h2>Not sure where to start?</h2>
+        <p>The discovery call is free, 45 minutes, and low-stakes. We'll talk through where you are and what would actually be useful.</p>
+        <a href="#" class="btn btn-light">Book a Free Discovery Call</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="nav-logo">Talk with Steph</a>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="work-with-me.html">Work with Me</a>
+      </nav>
+      <p class="footer-note">Not sure if this is for you? Read more <a href="about.html">about Steph</a> or <a href="work-with-me.html">how we work together</a>.</p>
     </div>
   </footer>
 
-<script>
-function toggleNav(btn) {
-  btn.classList.toggle("open");
-  document.querySelector(".nav-links").classList.toggle("open");
-}
-</script>
-<script src="config.js"></script>
+  <script src="nav.js"></script>
 </body>
 </html>
