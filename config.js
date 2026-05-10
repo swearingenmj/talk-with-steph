@@ -3,7 +3,6 @@
 //  Edit this file to update links across the entire website.
 //  You only need to change things here — nowhere else.
 // ============================================================
-
 const SITE_CONFIG = {
   // Your booking link
   bookingLink: "https://cal.com/steph-straub/45min",
@@ -14,11 +13,9 @@ const SITE_CONFIG = {
   // Your Linktree link (used in footer or wherever you add it)
   linktreeLink: "https://linktr.ee/talkwithsteph",
 };
-
 // ============================================================
 //  DO NOT EDIT BELOW THIS LINE
 // ============================================================
-
 document.addEventListener("DOMContentLoaded", function () {
   // Replace all booking links
   document.querySelectorAll("a[data-link='booking']").forEach(function (el) {
