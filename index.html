@@ -1,268 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Talk with Steph — Communication & Decision Coaching</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* HERO */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 520px;
-    }
-    .hero-text {
-      padding: 72px 48px 72px 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: #F5F0E8;
-    }
-    .hero-h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 42px;
-      line-height: 1.25;
-      color: #1E1E1A;
-      margin-bottom: 20px;
-      font-weight: 400;
-    }
-    .hero-h1 em { font-style: italic; color: #C45A2A; }
-    .hero-sub {
-      font-size: 15px;
-      color: #3a3a30;
-      max-width: 380px;
-      margin-bottom: 32px;
-      line-height: 1.8;
-    }
-    .hero-actions { display: flex; gap: 14px; align-items: center; }
-    .hero-image {
-      background: #2a2a24;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 420px;
-    }
-    .hero-image-inner {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #3a3530 0%, #2a2520 50%, #1e1a16 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 420px;
-    }
-    .photo-placeholder {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background: #5A7A5C;
-      opacity: 0.4;
-    }
-    .photo-label {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      font-size: 11px;
-      color: #b0a898;
-      opacity: 0.8;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    /* BLOG SECTION */
-    .blog-section { padding: 64px 40px; background: #F5F0E8; }
-    .section-label {
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #5A7A5C;
-      margin-bottom: 32px;
-      font-weight: 400;
-    }
-    .posts-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 24px;
-    }
-    .post-featured {
-      background: #fff;
-      border-radius: 2px;
-      overflow: hidden;
-      border: 0.5px solid #c8c0b0;
-    }
-    .post-sm {
-      background: #fff;
-      border-radius: 2px;
-      overflow: hidden;
-      border: 0.5px solid #c8c0b0;
-    }
-    .post-img-lg   { height: 220px; background: linear-gradient(135deg, #5A7A5C, #3a5a3c); }
-    .post-img-sm-1 { height: 140px; background: linear-gradient(135deg, #C45A2A, #a04020); }
-    .post-img-sm-2 { height: 140px; background: linear-gradient(135deg, #2E2A22, #1e1a16); }
-    .post-body { padding: 20px; }
-
-    /* ABOUT STRIP */
-    .about-strip { display: grid; grid-template-columns: 1fr 1fr; }
-    .about-strip-text {
-      padding: 64px 48px;
-      background: #5A7A5C;
-    }
-    .about-strip-text .eyebrow { color: #c8e0c8; }
-    .about-strip-text h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      color: #fff;
-      font-weight: 400;
-      margin: 12px 0 20px;
-      line-height: 1.3;
-    }
-    .about-strip-text p {
-      font-size: 14px;
-      color: #d8ecd8;
-      line-height: 1.85;
-      margin-bottom: 24px;
-    }
-    .about-strip-text a {
-      font-size: 13px;
-      color: #fff;
-      border-bottom: 1px solid #fff;
-      padding-bottom: 2px;
-      text-decoration: none;
-    }
-    .about-strip-image {
-      background: linear-gradient(135deg, #3a5a3c, #2a4a2c);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 300px;
-      position: relative;
-      overflow: hidden;
-    }
-    .about-circle {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    @media (max-width: 768px) {
-      .hero { grid-template-columns: 1fr; }
-      .hero-text { padding: 48px 24px; }
-      .hero-h1 { font-size: 32px; }
-      .hero-sub { max-width: 100%; }
-      .hero-image { min-height: 300px; }
-      .hero-image-inner { min-height: 300px; }
-      .blog-section { padding: 48px 24px; }
-      .posts-grid { grid-template-columns: 1fr; }
-      .about-strip { grid-template-columns: 1fr; }
-      .about-strip-text { padding: 48px 24px; }
-      .about-strip-image { min-height: 200px; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talk with Steph — Communication Coaching</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <nav class="site-nav">
-    <a href="index.html" class="nav-logo">Talk with Steph</a>
-    <button class="nav-hamburger" aria-label="Menu" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="work-with-me.html">Work with Me</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="https://cal.com/steph-straub/45min" data-link="booking" class="nav-cta">Book a Free Call</a>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Talk with Steph</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="work-with-me.html" class="nav-link">Work with Me</a>
+        <a href="#cta" class="btn btn-sm">Book a Free Call</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-text">
-      <div class="eyebrow">Communication &amp; Decision Coaching</div>
-      <h1 class="hero-h1">Something is off.<br>You can't quite name it <em>without feeling ungrateful.</em></h1>
-      <p class="hero-sub">But it's there. A quiet hum that tells you something needs to change — even when everything on paper looks fine.</p>
-      <div class="hero-actions">
-        <a href="https://cal.com/steph-straub/45min" data-link="booking" class="btn-primary">Book a Free Session</a>
-        <a href="about.html" class="btn-secondary">Meet Steph</a>
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="blob blob-hero-1"></div>
+      <div class="blob blob-hero-2"></div>
+      <div class="container">
+        <p class="eyebrow">Communication Coaching</p>
+        <h1 class="hero-headline">Most people who find their way here already know what they want. They're just having trouble saying it to the person who needs to hear it&nbsp;— whether that's their partner, their boss, or themselves.</h1>
+        <p class="hero-sub">You've talked it through with friends. You've sat with it long enough that it's practically furniture. What you don't have yet is a way to actually move — to say the thing, make the decision, and stop circling the same frustration you've been circling for months. That's the gap I help people close.</p>
+        <div class="btn-row">
+          <a href="#cta" class="btn">Book a Free Session</a>
+          <a href="about.html" class="btn-ghost">Meet Steph →</a>
+        </div>
       </div>
-    </div>
-    <div class="hero-image">
-      <div class="hero-image-inner">
-        <img src="assets/images/steph-hero.jpg" alt="Photo of Steph" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0;" />
+    </section>
+
+    <!-- RECOGNITION -->
+    <section class="recognition">
+      <div class="blob blob-recog"></div>
+      <div class="container">
+        <p class="eyebrow">If any of this sounds familiar</p>
+        <div class="recognition-lines">
+          <p class="recognition-line">You've had the same conversation in your head a hundred times but you still haven't had it out loud.</p>
+          <p class="recognition-line">You're not confused about what you want... but you are worried about what will happen when you say it.</p>
+          <p class="recognition-line">You keep waiting for the right moment, the right words, the right version of yourself who's ready... but she still hasn't shown up.</p>
+          <p class="recognition-line">You're still stuck in the same place, even though you've tried talking to friends, journaling, and therapy.</p>
+        </div>
       </div>
-      <!-- <span class="photo-label">Photo of Steph goes here</span> -->
-    </div>
-  </section>
+    </section>
 
-  <div class="divider-terracotta"></div>
-
-  <!-- PULL QUOTE -->
-  <section class="pullquote">
-    <p>"I love my life. I just don't feel like myself in it anymore."
-      <span>If that sentence just stopped you — you're in the right place.</span>
-    </p>
-  </section>
-
-  <div class="divider-sage"></div>
-
-  <!-- ABOUT STRIP -->
-  <section class="about-strip">
-    <div class="about-strip-text">
-      <div class="eyebrow">About Steph</div>
-      <h2>I'm a coach because I kept understanding my patterns perfectly and changing nothing.</h2>
-      <p>I could explain exactly why I was doing the thing. Trace it back. Name it clearly. Tell my friends about it. And then do it again the next week. Insight without support has a ceiling. That's the ceiling I help people break through.</p>
-      <a href="about.html">Read my story &rarr;</a>
-    </div>
-    <div class="about-strip-image">
-      <div class="about-circle">
-         <img
-            src="assets/images/calico-basin.jpg"
-            alt="Landscape photo of Red Rocks"
-            style="
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              position: absolute;
-              top: 0;
-              left: 0;
-            "
-          />
+    <!-- WHAT MAKES THIS DIFFERENT -->
+    <section class="different">
+      <div class="blob blob-diff"></div>
+      <div class="container">
+        <p class="eyebrow">What makes this different</p>
+        <h2>This isn't about understanding yourself better. <em>You already do.</em></h2>
+        <div class="different-body">
+          <p>Most people who come to me aren't looking for more basic self-reflection. They're looking for someone who can help them get from where they are to where they want to be, with a real plan for the conversation or decision that's been sitting in their chest like a stone.</p>
+          <p>We work on the fear underneath the avoidance. We build a framework you can actually use. And then we figure out how to say the thing — not in some idealized future version of yourself, but as you are right now, in the actual conversation you've been putting off.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- TESTIMONIAL -->
-  <section class="testimonial-strip">
-    <div class="eyebrow" style="color:#5A7A5C;">What people say</div>
-    <blockquote class="testimonial-strip-quote">I came into my session with a life admin list that was a mile long and no idea where to start. Steph helped me organize the chaos into a real, actionable list and introduced me to the Eisenhower Matrix — something I had never heard of and am still using to manage my tasks months later.</blockquote>
-    <div class="testimonial-strip-name">Missy S. &nbsp;&middot;&nbsp; Discovery session client</div>
-  </section>
+    <!-- QUOTE -->
+    <section class="quote-band">
+      <div class="container">
+        <blockquote>
+          <p>"I came in with a list of problems and no idea where to start. I left knowing exactly what I needed to do and why I'd been afraid to do it."</p>
+          <cite>— Missy, discovery session client</cite>
+        </blockquote>
+      </div>
+    </section>
 
-  <section class="cta-strip">
-    <h2>Ready to have that conversation?</h2>
-    <p>Start with a free 45-minute discovery call. No commitment.</p>
-    <a href="https://cal.com/steph-straub/45min" data-link="booking">Book your free session</a>
-  </section>
+    <!-- OBJECTION -->
+    <section class="objection">
+      <div class="blob blob-obj-1"></div>
+      <div class="blob blob-obj-2"></div>
+      <div class="container">
+        <h2 class="objection-headline">"I'm a capable person. I should be able to figure this out on my own."</h2>
+        <div class="objection-body">
+          <p>I'm a coach. I know how this works: the frameworks, the questions, the patterns. And I still hire coaches sometimes.</p>
+          <p>Because an outside perspective asks the questions you haven't thought to ask yourself. Someone who isn't living inside your particular history, your particular fears, your particular version of "fine" will see things you can't. Not because you're not capable, but because you're too close.</p>
+          <p class="objection-kicker">Being stuck isn't a capability problem. It's a proximity problem.</p>
+        </div>
+      </div>
+    </section>
 
-  <footer class="site-footer">
-    <a href="index.html" class="footer-logo">Talk with Steph</a>
-    <span class="footer-copy">&copy; 2026 Steph Straub &middot; All rights reserved</span>
-    <div class="footer-links">
-      <a href="https://www.instagram.com/talkwithsteph.co" data-link="instagram">Instagram</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://cal.com/steph-straub/45min" data-link="booking">Book a call</a>
+    <!-- WALK AWAY WITH -->
+    <section class="walkaway">
+      <div class="container">
+        <p class="eyebrow">What you walk away with</p>
+        <h2>Not just clarity. <em>A way forward.</em></h2>
+        <div class="walkaway-points">
+          <div class="walkaway-point">
+            <p>You'll have a framework for what to do the next time you feel stuck, in addition to insight into why you got stuck in the first place.</p>
+          </div>
+          <div class="walkaway-point">
+            <p>You'll know how to look at what you want through the lens of what actually matters to you, so the decision stops feeling impossible and starts feeling like yours.</p>
+          </div>
+          <div class="walkaway-point">
+            <p>And you'll understand the fear well enough to stop letting it make decisions for you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="cta">
+      <div class="blob blob-cta-1"></div>
+      <div class="blob blob-cta-2"></div>
+      <div class="container">
+        <h2>Ready to have <em>that</em> conversation?</h2>
+        <p>Start with a free 45-minute session. No commitment. Just an honest conversation about where you are and what feels stuck.</p>
+        <a href="#" class="btn btn-light">Book Your Free Session</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="nav-logo">Talk with Steph</a>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="work-with-me.html">Work with Me</a>
+      </nav>
+      <p class="footer-note">Not sure if this is for you? Read more <a href="about.html">about Steph</a> or <a href="work-with-me.html">how we work together</a>.</p>
     </div>
   </footer>
 
-<script>
-function toggleNav(btn) {
-  btn.classList.toggle("open");
-  document.querySelector(".nav-links").classList.toggle("open");
-}
-</script>
-<script src="config.js"></script>
+  <script src="nav.js"></script>
 </body>
 </html>
