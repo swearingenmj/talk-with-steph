@@ -1,215 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — Talk with Steph</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .about-page {
-      padding: 72px 40px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .about-page h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      font-weight: 400;
-      color: #1E1E1A;
-      margin-bottom: 8px;
-      line-height: 1.15;
-    }
-    .about-page p {
-      font-size: 15px;
-      color: #3a3a30;
-      line-height: 1.9;
-      margin-bottom: 20px;
-    }
-    .about-page blockquote {
-      border-left: 4px solid #C45A2A;
-      padding: 4px 0 4px 24px;
-      margin: 36px 0;
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      font-style: italic;
-      color: #1E1E1A;
-      line-height: 1.5;
-    }
-    .about-cta { margin-top: 40px; }
-
-    /* PHOTO + INTRO SPLIT */
-    .about-intro {
-      display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: 56px;
-      align-items: start;
-    }
-    .about-photo {
-      background: linear-gradient(135deg, #3a5a3c, #2a4a2c);
-      border-radius: 2px;
-      aspect-ratio: 3/4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: sticky;
-      top: 80px;
-      overflow: hidden;
-    }
-
-    /* VALUES */
-    .values-section {
-      background: #2E2A22;
-      padding: 64px 40px;
-    }
-    .values-section .eyebrow { color: #5A7A5C; margin-bottom: 16px; }
-    .values-section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 30px;
-      color: #F5F0E8;
-      font-weight: 400;
-      margin-bottom: 40px;
-      max-width: 560px;
-      line-height: 1.35;
-    }
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      max-width: 860px;
-    }
-    .value-item { }
-    .value-item h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 17px;
-      color: #F5F0E8;
-      font-weight: 400;
-      margin-bottom: 8px;
-    }
-    .value-item p {
-      font-size: 13px;
-      color: #b0a898;
-      line-height: 1.75;
-    }
-    .value-number {
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      color: #C45A2A;
-      margin-bottom: 10px;
-      font-weight: 400;
-    }
-
-  @media (max-width: 768px) {
-    .about-intro { grid-template-columns: 1fr; gap: 32px; }
-    .about-photo { position: relative; top: auto; aspect-ratio: 4/3; min-height: 260px; }
-    section[style*="padding: 72px 40px"] { padding: 48px 24px !important; }
-    h1[style*="font-size:48px"] { font-size: 36px !important; }
-    .values-section { padding: 48px 24px; }
-    .values-grid { grid-template-columns: 1fr; gap: 32px; }
-  }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <nav class="site-nav">
-    <a href="index.html" class="nav-logo">Talk with Steph</a>
-    <button class="nav-hamburger" aria-label="Menu" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="work-with-me.html">Work with Me</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="https://cal.com/steph-straub/45min" data-link="booking" class="nav-cta">Book a Free Call</a>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Talk with Steph</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="work-with-me.html" class="nav-link">Work with Me</a>
+        <a href="work-with-me.html#cta" class="btn btn-sm">Book a Free Call</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <div class="divider-terracotta"></div>
+  <main>
 
-  <section style="padding: 72px 40px; background: #F5F0E8;">
-    <div class="about-intro">
-      <div>
-        <div class="eyebrow">About</div>
-        <h1 style="font-family:'Playfair Display',serif; font-size:48px; font-weight:400; color:#1E1E1A; margin-bottom:28px; line-height:1.15;">Hi, I'm Steph.</h1>
+    <!-- ABOUT HERO -->
+    <section class="about-hero">
+      <div class="blob blob-hero-1"></div>
+      <div class="blob blob-hero-2"></div>
+      <div class="container">
+        <p class="eyebrow">About Steph</p>
+        <h1>I became a coach because I got tired of being a passenger in my own life.</h1>
+      </div>
+    </section>
 
-        <p>I'm a communication and decision coach. I work with people who have built a full life — the career, the relationship, the kids, the house — and still feel like something is off. Not broken. Just off.</p>
+    <!-- OPENING -->
+    <section class="about-section">
+      <div class="container about-prose">
+        <p>For a long time, I lived my life a bit scared and it made me dishonest. Nothing dramatic — I wasn't blowing anything up or hurting anyone in obvious ways. I was just waiting. Waiting for things to get bad enough that I had no choice. Waiting for a catastrophe to make the decision for me. Waiting for someone else to say the thing I already knew needed to be said.</p>
+        <p>And while I was waiting, I was causing myself and the people around me a quiet kind of hardship. Romantically, professionally, socially. Nothing gets better just because you delay the inevitable. I knew that. I just didn't know how to do anything about it.</p>
+      </div>
+    </section>
 
-        <blockquote style="border-left:4px solid #C45A2A; padding:4px 0 4px 24px; margin:36px 0; font-family:'Playfair Display',serif; font-size:22px; font-style:italic; color:#1E1E1A; line-height:1.5;">"I love my life. I just don't feel like myself in it anymore."</blockquote>
+    <!-- THE TURN -->
+    <section class="about-turn">
+      <div class="blob blob-turn"></div>
+      <div class="container about-prose">
+        <p>The first time I did it differently, I told someone I was dating that it wasn't working anymore. We both already knew it. In the past, I would have waited for things to get worse, for a cleaner excuse, for something external to make the choice obvious. Instead I just said: "This isn't working. That makes me sad, but it doesn't make it less true. Let's resolve this without doing something shitty to each other."</p>
+        <p class="turn-kicker">It felt like the most grown-up thing I'd ever done. Unexpectedly, it also felt like a superpower.</p>
+      </div>
+    </section>
 
-        <p>If that sentence stopped you — you're exactly who I built this practice for.</p>
+    <!-- THE INSIGHT -->
+    <section class="about-section">
+      <div class="container about-prose">
+        <p>What I learned, and what I now help other people learn, is that avoiding a hard conversation doesn't protect anyone. It just means the conversation happens later, under worse conditions, with more damage already done.</p>
+        <p>The fear doesn't go away on its own. The resentment doesn't either. What changes, when you finally say the thing, is that you stop being a passenger. You start directing.</p>
+      </div>
+    </section>
 
-        <p>Here's the honest version of how I became a coach: I kept understanding my own patterns perfectly and changing absolutely nothing. I could explain exactly why I was doing the thing. Trace it back. Name it clearly. Tell my friends about it in a way that made complete sense.</p>
+    <!-- WHY COACHING -->
+    <section class="about-coaching">
+      <div class="blob blob-coaching-1"></div>
+      <div class="container about-prose">
+        <p>I understood my own patterns perfectly for years. I could explain exactly why I was doing the thing, trace it back, name it clearly. And then do it again the following week. Insight alone has a ceiling. I hit it, hard, more than once.</p>
+        <p>That's the ceiling I help people break through: not by doing more self-examination, but by building the skills and the courage to actually move.</p>
+        <p>And yes, I still hire coaches myself sometimes, because you can know exactly how something works and still be too close to see it clearly in your own life. That's not a weakness. It's just how being human works.</p>
+      </div>
+    </section>
 
-        <p>And then do it again the next week.</p>
-
-        <p>Insight without support has a ceiling. I found mine. And once I got actual support — not advice, not frameworks, just honest conversation with someone who wasn't going to let me off the hook — things started to shift. That's what I do for other people now.</p>
-
-        <p>I'm not here to tell you what to do. I'm here to be the person who helps you hear yourself again — and actually do something with what you hear.</p>
-
-        <div style="margin-top:36px;">
-          <a href="https://cal.com/steph-straub/45min" data-link="booking" class="btn-primary">Book a free session</a>
+    <!-- WHAT I BELIEVE -->
+    <section class="beliefs">
+      <div class="blob blob-beliefs"></div>
+      <div class="container">
+        <p class="eyebrow">What I believe</p>
+        <div class="beliefs-list">
+          <p class="belief">I believe that most people who feel stuck aren't lacking self-awareness. They're lacking a framework for what to do with it.</p>
+          <p class="belief">I believe that hard conversations, done well, are one of the most loving things you can do — for yourself and for the people in your life.</p>
+          <p class="belief belief-last">And I believe that nothing gets better just because you delay the inevitable. But it can get a lot better once you stop.</p>
         </div>
       </div>
+    </section>
 
-      <div class="about-photo">
-        <img src="assets/images/steph-rocks.JPG" alt="Steph with red rocks" style="width:100%; height:100%; object-fit:cover; border-radius:2px;" />
+    <!-- CTA -->
+    <section class="cta-section" id="cta">
+      <div class="blob blob-cta-1"></div>
+      <div class="blob blob-cta-2"></div>
+      <div class="container">
+        <h2>If any of that resonates, I'd love to talk.</h2>
+        <a href="work-with-me.html#cta" class="btn btn-light">Book a Free Session</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="divider-sage"></div>
+  </main>
 
-  <!-- VALUES -->
-  <section class="values-section">
-    <div class="eyebrow">How I work</div>
-    <h2>I'm in it with you. Not above it.</h2>
-    <div class="values-grid">
-      <div class="value-item">
-        <div class="value-number">01</div>
-        <h3>I ask, I don't prescribe</h3>
-        <p>I don't come in with a plan for your life. I ask the questions that help you figure out what you actually want — separate from what you've been told you should want.</p>
-      </div>
-      <div class="value-item">
-        <div class="value-number">02</div>
-        <h3>Honest, not performative</h3>
-        <p>No scripts. No "have you tried journaling?" energy. Just direct conversation that gets to the root of what's going on — and what you want to do about it.</p>
-      </div>
-      <div class="value-item">
-        <div class="value-number">03</div>
-        <h3>I still have a coach</h3>
-        <p>I'm not coaching from a mountain. I have hard weeks too. I still catch myself narrating a pattern really clearly and then doing it anyway. The difference is I don't stay there as long anymore. That's the work.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIAL -->
-  <section class="testimonial-strip">
-    <div class="eyebrow" style="color:#5A7A5C;">What people say</div>
-    <blockquote class="testimonial-strip-quote">I came into my session with a life admin list that was a mile long and no idea where to start. Steph helped me organize the chaos into a real, actionable list and introduced me to the Eisenhower Matrix — something I had never heard of and am still using to manage my tasks months later.</blockquote>
-    <div class="testimonial-strip-name">Missy S. &nbsp;&middot;&nbsp; Discovery session client</div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-strip">
-    <h2>Ready to have that conversation?</h2>
-    <p>Start with a free 45-minute discovery call. No commitment.</p>
-    <a href="https://cal.com/steph-straub/45min" data-link="booking">Book your free session</a>
-  </section>
-
-  <footer class="site-footer">
-    <a href="index.html" class="footer-logo">Talk with Steph</a>
-    <span class="footer-copy">&copy; 2026 Steph Straub &middot; All rights reserved</span>
-    <div class="footer-links">
-      <a href="https://www.instagram.com/talkwithsteph.co" data-link="instagram">Instagram</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://cal.com/steph-straub/45min" data-link="booking">Book a call</a>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="nav-logo">Talk with Steph</a>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="work-with-me.html">Work with Me</a>
+      </nav>
+      <p class="footer-note">Not sure if this is for you? Read more <a href="about.html">about Steph</a> or <a href="work-with-me.html">how we work together</a>.</p>
     </div>
   </footer>
 
-<script>
-function toggleNav(btn) {
-  btn.classList.toggle("open");
-  document.querySelector(".nav-links").classList.toggle("open");
-}
-</script>
-<script src="config.js"></script>
+  <script src="nav.js"></script>
 </body>
 </html>
