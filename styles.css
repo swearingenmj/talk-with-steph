@@ -47,6 +47,8 @@ body {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* ── TYPOGRAPHY ── */
@@ -169,6 +171,7 @@ p {
   pointer-events: none;
   background: var(--t3);
   opacity: 0.5;
+  z-index: 0;
 }
 
 .blob-hero-1 {
@@ -533,6 +536,10 @@ p {
   margin: 0 auto 1.25rem;
 }
 
+.cta-section h2 em {
+  color: var(--t2);
+}
+
 .cta-section p {
   color: var(--t2);
   max-width: 440px;
@@ -873,6 +880,7 @@ p {
 
 .about-photo-wrap {
   max-width: 480px;
+  margin: 0 auto;
 }
 
 .about-photo-wrap img {
