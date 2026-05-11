@@ -50,12 +50,13 @@ talkwithsteph/
 
 ## How to edit your website
 
-1. Open the file you want to edit in a plain text editor.
-   - On a Mac: use **TextEdit** (make sure it's in plain text mode: Format → Make Plain Text)
-   - On a PC: use **Notepad**
-   - Even better: download the free app **Visual Studio Code** at code.visualstudio.com — it color-codes everything and makes editing much easier
-2. Use **Edit → Find** (or Cmd+F / Ctrl+F) to search for the text you want to change
-3. Make your edit, save the file, and open it in your browser to check it before pushing to GitHub
+1. Go to the repository on GitHub and click the file you want to edit
+2. Click the **pencil icon** (Edit this file) in the top right corner of the file view
+3. Use **Ctrl+F** to search for the text you want to change
+4. Make your edit
+5. When you're done, scroll down to the **Commit changes** button, add a short note about what you changed, and click **Commit changes**
+
+The site will update automatically within a minute or two. Hard refresh your browser (Ctrl+Shift+R or Cmd+Shift+R) if you don't see the change right away.
 
 ---
 
