@@ -1,9 +1,9 @@
 # Talk with Steph — Website Guide
 
 ## To do list
-[ ] Create newsletter signup list—talk to Missy re:forms v Kit?
-[ ] Make waitlist button do something
-[ ] Ask AK for testimonial
+- [ ] Create newsletter signup list—talk to Missy re:forms v Kit?
+- [ ] Make waitlist button do something
+- [ ] Ask AK for testimonial
 
 ## About this website
 
